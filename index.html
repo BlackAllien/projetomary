@@ -98,9 +98,11 @@
             background-color: #c0392b;
         }
 
-        audio {
-            display: block;
-            margin: 20px auto;
+        /* Inicialmente o áudio fica escondido */
+        .audio-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
         }
 
     </style>
@@ -123,26 +125,40 @@
         <p>Aqui vai um compilado das fotos dos nossos melhores momentos juntos. E pode apostar que ainda vamos colecionar muitos mais. Tem mais surpresas vindo por aí! 🎉</p>
 
         <div class="photo-gallery">
-            <img src="https://i.postimg.cc/4nH0BDWj/Whats-App-Image-2024-10-13-at-17-58-53.jpg" alt="Foto 1">
-            <img src="https://i.postimg.cc/N2tR82Js/Whats-App-Image-2024-07-26-at-08-15-16.jpg" alt="Foto 2">
-            <img src="https://i.postimg.cc/RJTKgCyc/Whats-App-Image-2024-08-05-at-20-40-48.jpg" alt="Foto 3">
-            <img src="https://i.postimg.cc/4nvSD6T1/Whats-App-Image-2024-08-23-at-16-42-39.jpg" alt="Foto 4">
-            <img src="https://i.postimg.cc/PP2FxdJp/Whats-App-Image-2024-09-03-at-14-10-44.jpg" alt="Foto 5">
-            <img src="https://i.postimg.cc/yDxp323f/Whats-App-Image-2024-10-13-at-17-59-00.jpg" alt="Foto 6">
-            <img src="https://i.postimg.cc/8FrytWHM/Whats-App-Image-2024-10-13-at-17-59-04.jpg" alt="Foto 7">
-            <img src="https://i.postimg.cc/njb35zR5/Whats-App-Image-2024-10-13-at-17-59-08.jpg" alt="Foto 8">
+            <img src="https://i.imgur.com/z4R5baI.jpg" alt="Foto 1">
+            <img src="https://i.imgur.com/VukGPor.jpg" alt="Foto 2">
+            <img src="https://i.imgur.com/6wSLinL.jpg" alt="Foto 3">
+            <img src="https://i.imgur.com/oy02lSj.jpg" alt="Foto 4">
+            <img src="https://i.imgur.com/pULqMPX.jpg" alt="Foto 5">
+            <img src="https://i.imgur.com/yPvN7oE.jpg" alt="Foto 6">
+            <img src="https://i.imgur.com/XTAdDEO.jpg" alt="Foto 7">
+            <img src="https://i.imgur.com/kdYpwof.jpg" alt="Foto 8">
         </div>
 
-        <button class="surprise-button" onclick="document.getElementById('surprise-audio').play()">Clique para a surpresa! 😜</button>
+        <button class="surprise-button" onclick="showAudio()">Clique para a surpresa! 😜</button>
 
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1934522837%3Fsecret_token%3Ds-KyI7zAZnjyj&color=%230598a5&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-        
-       <div class="footer">
+        <div class="audio-container" id="audioContainer">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1934522837%3Fsecret_token%3Ds-KyI7zAZnjyj&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+
+        <div class="footer">
             <p>Com amor,</p>
-            <p>Baby TI 💻❤️</p>
-            <p>Quem diria... a pessoa que mais gosto desse CER II indo embora 🥲. E saiba de uma coisa: EU TE AMO, MARIA CLARA. 💖</p>
+            <p>Baby TI 💻</p>
+            <p>Quem diria... a pessoa que mais gosto desse CER II indo embora. E saiba de uma coisa: EU TE AMO, MARIA CLARA ❤️</p>
         </div>
     </div>
+
+    <script>
+        function showAudio() {
+            var audioDiv = document.getElementById("audioContainer");
+            if (audioDiv.style.display === "none" || audioDiv.style.display === "") {
+                audioDiv.style.display = "block";
+            } else {
+                audioDiv.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
